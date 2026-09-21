@@ -1,0 +1,47 @@
+MLB YT - third-party software
+=============================
+
+MLB YT includes the following open-source components. Each one is licensed under its own
+terms, listed below. They remain the property of their authors.
+
+Bundled programs (separate executables in the "bin" folder, not modified)
+------------------------------------------------------------------------
+FFmpeg (ffmpeg.exe, ffprobe.exe)
+    Version:  N-126619-g8f1e6edbab-20260916 (win64 GPL build by yt-dlp/FFmpeg-Builds)
+    License:  GNU General Public License v3.0 or later
+    Source:   https://github.com/FFmpeg/FFmpeg  and  https://ffmpeg.org/download.html#get-sources
+    Build:    https://github.com/yt-dlp/FFmpeg-Builds (scripts used to build this binary)
+    Your rights under the GPL (including access to the source code) are not limited by
+    the MLB YT license.
+
+Deno (deno.exe) 2.9.7
+    License:  MIT - https://github.com/denoland/deno/blob/main/LICENSE.md
+
+Libraries built into MLB YT.exe
+-------------------------------
+Python 3.13 ...................... PSF License 2.0         https://www.python.org
+yt-dlp 2026.08.19 ................ The Unlicense           https://github.com/yt-dlp/yt-dlp
+yt-dlp-ejs 0.8.0 ................. Unlicense; includes meriyah (ISC) and astring (MIT)
+                                                           https://github.com/yt-dlp/ejs
+curl_cffi 0.16.3 ................. MIT (includes curl-impersonate, MIT, and libcurl, curl license)
+                                                           https://github.com/lexiforest/curl_cffi
+requests ......................... Apache License 2.0      https://github.com/psf/requests
+urllib3 .......................... MIT                     https://github.com/urllib3/urllib3
+websockets ....................... BSD-3-Clause            https://github.com/python-websockets/websockets
+Brotli ........................... MIT                     https://github.com/google/brotli
+certifi .......................... MPL-2.0                 https://github.com/certifi/python-certifi
+pycryptodomex .................... BSD-2-Clause / public domain  https://github.com/Legrandin/pycryptodome
+charset-normalizer ............... MIT                     https://github.com/jawah/charset_normalizer
+idna ............................. BSD-3-Clause            https://github.com/kjd/idna
+cffi / pycparser ................. MIT / BSD-3-Clause
+OpenSSL .......................... Apache License 2.0      https://www.openssl.org
+Tcl/Tk ........................... Tcl/Tk License (BSD-style)
+SQLite ........................... Public domain
+libffi, zlib, bzip2, xz .......... MIT / zlib / BSD-style / public domain
+
+Fonts (bundled, web\fonts)
+--------------------------
+Sora ............................. SIL Open Font License 1.1 (c) The Sora Project Authors
+JetBrains Mono ................... SIL Open Font License 1.1 (c) The JetBrains Mono Project Authors
+
+The full license texts are available at the links above.
