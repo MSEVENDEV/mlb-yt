@@ -1,6 +1,9 @@
 <div align="center">
 
-<img src="assets/icon.png" width="92" alt="MLB YT">
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="assets/icon-black.png">
+  <img src="assets/icon.png" width="92" alt="MLB YT">
+</picture>
 
 # MLB YT
 
@@ -19,15 +22,26 @@
 
 ---
 
-## ⬇️ Install (1 minute)
+## ⬇️ Install
 
-1. **[Click here to download the installer](https://github.com/MSEVENDEV/mlb-yt/releases/latest/download/MLB-YT-Setup.exe)**
-2. **Open the file** you downloaded (`MLB-YT-Setup.exe`)
-   - If a blue box says **"Windows protected your PC"** → click **More info** → **Run anyway**
-     <br><sub>Windows shows this for new apps that don't have a paid certificate. It's normal.</sub>
-3. Click **Next** → tick **I accept** → **Next** → **Install** → **Finish** 🎉
+### ⚡ Easiest: no Windows warnings (30 seconds)
 
-That's it. Open **MLB YT** from your desktop. You'll never need to download it again, because **it updates itself**. 🔄
+1. Press the <kbd>⊞ Windows</kbd> key, type **PowerShell** and press <kbd>Enter</kbd>
+2. Copy this line, paste it in (right-click), and press <kbd>Enter</kbd>:
+
+```powershell
+irm https://raw.githubusercontent.com/MSEVENDEV/mlb-yt/main/install.ps1 | iex
+```
+
+3. Done. MLB YT opens by itself 🎉
+
+### 🖱️ Or use the installer
+
+1. **[Download MLB-YT-Setup.exe](https://github.com/MSEVENDEV/mlb-yt/releases/latest/download/MLB-YT-Setup.exe)** and open it
+2. If a blue box says **"Windows protected your PC"** → **More info** → **Run anyway**
+3. **Next** → tick **I accept** → **Next** → **Install** → **Finish**
+
+Both ways install the same app. After that **it updates itself**, so you never download it again. 🔄
 
 ---
 
@@ -36,14 +50,15 @@ That's it. Open **MLB YT** from your desktop. You'll never need to download it a
 | | |
 |---|---|
 | 🌍 **Any site** | YouTube, TikTok, Instagram, Snapchat, X, Facebook, SoundCloud, Twitch, Reddit and **1,700+ more** |
-| 🎵 **Spotify** | Songs, albums and playlists saved as MP3 with the real title, artist and cover art |
-| 🎬 **Editing-ready** | Videos open straight in **After Effects, Premiere and CapCut** (converted to H.264 automatically) |
+| 🎵 **Spotify** | Songs, albums and playlists saved as MP3 with the real title, artist and cover art, 4 songs at a time |
+| 🎬 **Editing-ready** | Videos open straight in **After Effects, Premiere and CapCut**: H.264, or **ProRes** for 100% After Effects-proof files |
+| 🛠️ **Fix old videos** | Turn videos you already have into editing-ready copies in one click |
 | 📺 **Any quality** | From 144p up to 4K / 8K, as MP4, MKV or WEBM |
 | 🎧 **Audio only** | MP3 320k, M4A, OPUS, FLAC or WAV |
 | 📚 **Playlists** | A whole YouTube playlist or Spotify album in one click |
 | 🔐 **Private posts** | Optional: use your browser login for private or age-restricted videos |
-| ⚡ **Fast** | 2 downloads at once, live speed and time left, cancel anytime |
-| 🔄 **Auto-updates** | New versions install themselves, and every update is digitally signed |
+| ⚡ **Fast** | 3 downloads at once, anti-throttle downloading, smart retries, live speed and time left |
+| 🔄 **Auto-updates** | The app and its download engine keep themselves up to date, and every app update is digitally signed |
 | 🖤 **Clean design** | Animated black and white interface, drag and drop, <kbd>Ctrl</kbd>+<kbd>V</kbd> to paste |
 
 ---
@@ -70,16 +85,17 @@ That's it. Open **MLB YT** from your desktop. You'll never need to download it a
 ## ❓ Help
 
 <details><summary><b>"Windows protected your PC" when installing</b></summary><br>
-Click <b>More info</b> → <b>Run anyway</b>. Windows shows this for apps without a paid code-signing certificate.
+Click <b>More info</b> → <b>Run anyway</b>. Or use the ⚡ one-line install above, which shows no warnings.
 </details>
 
 <details><summary><b>A link doesn't work</b></summary><br>
-Open ⚙️ <b>Settings → Update yt-dlp</b>, then close and reopen the app. Sites change often.<br>
+Close and reopen the app (it keeps its download engine up to date by itself), or open ⚙️ <b>Settings → Update yt-dlp</b>.<br>
 For private posts or stories, turn on <b>Use my browser login</b> in Settings.
 </details>
 
 <details><summary><b>No picture in After Effects / Premiere</b></summary><br>
-Keep <b>Editing-ready</b> switched on (it's on by default). The app will convert the video for you.
+Keep <b>Editing-ready</b> on and pick <b>ProRes</b>. For videos you already have, click <b>Fix a video for editing</b>.<br>
+In After Effects, delete the old clip from the project before importing the new one, because it remembers old files by name.
 </details>
 
 <details><summary><b>How do I update?</b></summary><br>
@@ -93,6 +109,17 @@ Windows <b>Settings → Apps → MLB YT → Uninstall</b>. Your downloaded files
 ---
 
 <div align="center">
+
+<a href="https://github.com/MSEVENDEV">
+  <picture>
+    <source media="(prefers-color-scheme: light)" srcset="assets/author-black.png">
+    <img src="assets/author.png" width="64" alt="MSEVENDEV">
+  </picture>
+</a>
+
+**Designed & built by [MSEVENDEV](https://github.com/MSEVENDEV)**
+
 <sub>© 2026 MSEVENDEV · All rights reserved · <a href="LICENSE">License</a> · <a href="THIRD-PARTY-NOTICES.txt">Credits</a><br>
 Only download content you own or have permission to save.</sub>
+
 </div>
