@@ -6,7 +6,7 @@
     $ErrorActionPreference = 'Stop'
     $ProgressPreference = 'SilentlyContinue'
     [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
-    $base = 'https://github.com/MSEVENDEV/mlb-yt/releases/latest/download'
+    $releases = 'https://github.com/MSEVENDEV/mlb-yt/releases'
 
     Write-Host ''
     Write-Host '   M L B   Y T' -ForegroundColor White
@@ -14,14 +14,22 @@
     Write-Host ''
     try {
         Write-Host '   [1/3] Finding the latest version...'
-        $info = Invoke-RestMethod "$base/latest.json" -UseBasicParsing
+        # cache-busting: Windows PowerShell otherwise may reuse an old cached copy
+        $info = Invoke-RestMethod "$releases/latest/download/latest.json?nocache=$([DateTime]::UtcNow.Ticks)" `
+            -Headers @{ 'Cache-Control' = 'no-cache' } -UseBasicParsing
         if ($info.setup.file -notmatch '^MLB-YT-Setup-\d+\.\d+\.\d+\.exe$' -or $info.setup.sha256 -notmatch '^[0-9a-f]{64}$') {
             throw 'Unexpected release info.'
         }
         $exe = Join-Path $env:TEMP $info.setup.file
 
         Write-Host ("   [2/3] Downloading MLB YT {0}  ({1:N0} MB)..." -f $info.version, ($info.setup.size / 1MB))
-        Invoke-WebRequest "$base/$($info.setup.file)" -OutFile $exe -UseBasicParsing
+        $url = "$releases/download/v$($info.version)/$($info.setup.file)"
+        if (Get-Command curl.exe -ErrorAction SilentlyContinue) {   # built into Windows 10/11: fast + resumable
+            & curl.exe -fsSL --retry 3 -o $exe $url
+            if ($LASTEXITCODE -ne 0) { throw "Download failed (curl $LASTEXITCODE). Check your internet and try again." }
+        } else {
+            Invoke-WebRequest $url -OutFile $exe -UseBasicParsing
+        }
         if ((Get-FileHash $exe -Algorithm SHA256).Hash.ToLower() -ne $info.setup.sha256) {
             Remove-Item $exe -ErrorAction SilentlyContinue
             throw 'The download was damaged. Please run the command again.'
