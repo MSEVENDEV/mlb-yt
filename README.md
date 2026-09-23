@@ -22,26 +22,17 @@
 
 ---
 
-## ⬇️ Install
+## ⬇️ Install (1 minute)
 
-### ⚡ Easiest: no Windows warnings (30 seconds)
+**1.** **[Click here to download MLB-YT-Setup.exe](https://github.com/MSEVENDEV/mlb-yt/releases/latest/download/MLB-YT-Setup.exe)**, then open the downloaded file.
 
-1. Press the <kbd>⊞ Windows</kbd> key, type **PowerShell** and press <kbd>Enter</kbd>
-2. Copy this line, paste it in (right-click), and press <kbd>Enter</kbd>:
+**2.** Windows shows a blue box. Click **More info**, then **Run anyway**:
 
-```powershell
-irm https://raw.githubusercontent.com/MSEVENDEV/mlb-yt/main/install.ps1 | iex
-```
+<div align="center"><img src="assets/windows-warning.png" width="780" alt="Click More info, then Run anyway"></div>
 
-3. Done. MLB YT opens by itself 🎉
+**3.** Click **Next** → tick **I accept** → **Next** → **Install** → **Finish** 🎉
 
-### 🖱️ Or use the installer
-
-1. **[Download MLB-YT-Setup.exe](https://github.com/MSEVENDEV/mlb-yt/releases/latest/download/MLB-YT-Setup.exe)** and open it
-2. If a blue box says **"Windows protected your PC"** → **More info** → **Run anyway**
-3. **Next** → tick **I accept** → **Next** → **Install** → **Finish**
-
-Both ways install the same app. After that **it updates itself**, so you never download it again. 🔄
+That's it — MLB YT is on your desktop, and **it updates itself** from now on. 🔄
 
 ---
 
@@ -56,7 +47,7 @@ Both ways install the same app. After that **it updates itself**, so you never d
 | 📺 **Any quality** | From 144p up to 4K / 8K, as MP4, MKV or WEBM |
 | 🎧 **Audio only** | MP3 320k, M4A, OPUS, FLAC or WAV |
 | 📚 **Playlists** | A whole YouTube playlist or Spotify album in one click |
-| 🔐 **Private posts** | Optional: use your browser login for private or age-restricted videos |
+| 🔐 **Private posts** | Optional sign-in (Firefox or a cookies.txt file) for private or age-restricted links |
 | ⚡ **Fast** | 3 downloads at once, anti-throttle downloading, smart retries, live speed and time left |
 | 🔄 **Auto-updates** | The app and its download engine keep themselves up to date, and every app update is digitally signed |
 | 🖤 **Clean design** | Animated black and white interface, drag and drop, <kbd>Ctrl</kbd>+<kbd>V</kbd> to paste |
@@ -85,12 +76,21 @@ Both ways install the same app. After that **it updates itself**, so you never d
 ## ❓ Help
 
 <details><summary><b>"Windows protected your PC" when installing</b></summary><br>
-Click <b>More info</b> → <b>Run anyway</b>. Or use the ⚡ one-line install above, which shows no warnings.
+Click <b>More info</b> → <b>Run anyway</b> (see the picture above). Windows shows this for every app that doesn't
+have a paid code-signing certificate. It isn't a virus warning, and it disappears once the app is installed.
+</details>
+
+<details><summary><b>"Could not copy Chrome cookie database"</b></summary><br>
+Nothing is broken: that only means the optional <b>sign-in</b> couldn't read your browser cookies, and downloads
+keep working without it. Chrome and Edge lock and encrypt their cookies, so either switch it <b>Off</b> in
+⚙️ Settings, or pick a <b>cookies.txt</b> file there (export one with a "get cookies.txt" browser extension).
+You only need a sign-in for private or age-restricted links.
 </details>
 
 <details><summary><b>A link doesn't work</b></summary><br>
-Close and reopen the app (it keeps its download engine up to date by itself), or open ⚙️ <b>Settings → Update yt-dlp</b>.<br>
-For private posts or stories, turn on <b>Use my browser login</b> in Settings.
+First, make sure the link is complete — links copied halfway are the most common cause.<br>
+Otherwise close and reopen the app (it keeps its download engine up to date by itself), or open
+⚙️ <b>Settings → Update yt-dlp</b>.
 </details>
 
 <details><summary><b>No picture in After Effects / Premiere</b></summary><br>
